@@ -13,9 +13,9 @@
     "vue-property-decorator": "^7.0.0"
   },
   "devDependencies": {
-    "@vue/cli-plugin-babel": "^3.2.0",
-    "@vue/cli-plugin-typescript": "^3.2.0",
-    "@vue/cli-service": "^3.2.0",
+    "@vue/cli-plugin-babel": "^3.3.0",
+    "@vue/cli-plugin-typescript": "^3.3.0",
+    "@vue/cli-service": "^3.3.0",
     "axios": "^0.18.0",
     "html-loader": "^0.5.5",
     "node-sass": "^4.9.0",

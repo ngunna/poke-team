@@ -1,4 +1,5 @@
 ﻿module.exports = {
+    publicPath: '/poke-team/',
     runtimeCompiler: true,
     chainWebpack: config => {
         // html-loader
