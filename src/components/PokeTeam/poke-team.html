@@ -1,0 +1,35 @@
+﻿<div class="poke-team">
+    <div class="poke-controls">
+        <i class="fas fa-sync-alt poke-controls__refresh" v-on:click="refreshTeam()"></i>
+        <i class="fas fa-eye poke-controls__hide" v-if="!isHidden" v-on:click="showHideTeam()"></i>
+        <i class="fas fa-eye-slash poke-controls__hide" v-else-if="isHidden" v-on:click="showHideTeam()"></i>
+    </div>
+    <ul class="poke-list" v-if="!isLoading && !isHidden">
+        <li class="poke-list-item" v-for="pk in team">
+            <div class="poke-tainer">
+                <img class="poke-list-item__img" :src=pk.sprites.front_default />
+                <div class="poke-list-item__detail">
+                    <span class="poke-list-item__name">{{pk.name}}</span>
+                    <div>
+                        <small class="poke-list-item__type" v-for="(type, i) in pk.types">
+                            <template v-if="i < 1">
+                                {{type.type.name}}
+                            </template>
+                            <template v-else>
+                                /{{type.type.name}}
+                            </template>
+                        </small>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+    
+    <div class="poke-team__hidden" v-if="isHidden && !isLoading">
+        <p>Your team is hidden!</p>
+    </div>
+
+    <span class="poke-team__loading" v-if="isLoading">
+        <i class="fas fa-spinner fa-spin"></i>
+    </span>
+</div>
